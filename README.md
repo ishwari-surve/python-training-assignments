@@ -1,1 +1,1 @@
-# my-first-repo
+python-training-assignments
