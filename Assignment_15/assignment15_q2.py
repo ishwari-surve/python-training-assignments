@@ -1,7 +1,13 @@
 #2.Write a lambda function using filter() which accepts a list of numbers and returns a list of even numbers.
 
-numbers = [1, 2, 3, 4, 5, 6]
+def main():
+    Data = [1, 2, 3, 4, 5, 6]
+    print("Actual Data is :", Data)
 
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+    Even = list(filter(lambda x: x % 2 == 0, Data))
+    print("Even Numbers are :", Even)
 
-print(even_numbers)
+
+if __name__ == "__main__":
+    main()
+
