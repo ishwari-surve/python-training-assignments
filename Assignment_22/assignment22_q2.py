@@ -1,6 +1,6 @@
 class Circle:
 
-    PI = 3.14  
+    PI = 3.14   
 
     def __init__(self):
         self.Radius = 0.0
@@ -8,7 +8,7 @@ class Circle:
         self.Circumference = 0.0
 
     def Accept(self):
-        self.Radius = float(input("Enter radius of circle: "))
+        self.Radius = float(input("Enter radius: "))
 
     def CalculateArea(self):
         self.Area = Circle.PI * self.Radius * self.Radius
@@ -16,12 +16,24 @@ class Circle:
     def CalculateCircumference(self):
         self.Circumference = 2 * Circle.PI * self.Radius
 
+    def Display(self):
+        print("Radius:", self.Radius)
+        print("Area:", self.Area)
+        print("Circumference:", self.Circumference)
+        print("--------------------")
 
-obj = Circle()
 
-obj.Accept()
-obj.CalculateArea()
-obj.CalculateCircumference()
+# creating first object
+obj1 = Circle()
+obj1.Accept()
+obj1.CalculateArea()
+obj1.CalculateCircumference()
+obj1.Display()
 
-print("Area of circle:", obj.Area)
-print("Circumference of circle:", obj.Circumference)
+# creating second object
+obj2 = Circle()
+obj2.Accept()
+obj2.CalculateArea()
+obj2.CalculateCircumference()
+obj2.Display()
+
