@@ -6,53 +6,7 @@ import matplotlib.pyplot as plt
 Border = "--" * 40
 
 #######################################################################
-# Step 1: Load the Dataset
-#######################################################################
-
-print(Border)
-print("Step 1: Load the Dataset")
-print(Border)
-
-df = pd.read_csv("student_performance_ml.csv")
-
-feature_cols = [
-    "StudyHours",
-    "Attendance",
-    "PreviousScore",
-    "AssignmentsCompleted",
-    "SleepHours"
-]
-
-X = df[feature_cols]
-Y = df["FinalResult"]
-
-#######################################################################
-# Step 2: Train-Test Split
-#######################################################################
-
-X_train, X_test, Y_train, Y_test = train_test_split(
-    X,
-    Y,
-    test_size=0.3,
-    random_state=42
-)
-
-#######################################################################
-# Step 3: Model Training
-#######################################################################
-
-model = DecisionTreeClassifier(
-    criterion="gini",
-    max_depth=3,
-    random_state=42
-)
-
-model.fit(X_train, Y_train)
-
-print("Model Trained Successfully!")
-
-#######################################################################
-# Step 4: Decision Tree Visualization
+# Step 1: Decision Tree Visualization
 #######################################################################
 
 print(Border)
@@ -69,4 +23,5 @@ plot_tree(
 )
 
 plt.title("Decision Tree for Student Performance")
+
 plt.show()
